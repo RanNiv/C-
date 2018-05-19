@@ -1,5 +1,5 @@
 ##### Table of Contents  
-[00_Basic string and debugging](#00_Basic string and debugging)  
+[Basic string and debugging](#Basic string and debugging)  
 
 
 
@@ -130,7 +130,7 @@ namespace _02_basic_types
 
 
 
-<a name="00_Basic string and debugging"/>
+<a name="Basic string and debugging"/>
 #### 00_Basic string and debugging
 ```csharp
 using System;
