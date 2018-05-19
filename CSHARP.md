@@ -1,9 +1,8 @@
 ##### Table of Contents  
 [00_Basic string and debugging](#00_Basic string and debugging)  
-[01_Mul function example](#01_Mul function example)  
 
 
-<a name="Day 01 - 11.05.2018"/>
+
 #### Day 01 - 11.05.2018
 ```csharp
 using System;
@@ -34,7 +33,6 @@ namespace _01_basic_types
 
 
 
-<a name="Day 01 - 11.05.2018"/>
 #### Day 01 - 11.05.2018
 ```csharp
 using System;
