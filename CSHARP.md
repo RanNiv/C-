@@ -1,10 +1,9 @@
+  * [Chapter 1](#00_Basic string and debugging)
+  * [Chapter 2](#06_loop exersice)
 
 
 
-
-
-
-#### Day 01 - 11.05.2018
+## Day 01 - 11.05.2018 <a id="Day 01 - 11.05.2018"></a>
 ```csharp
 using System;
 
@@ -34,10 +33,7 @@ namespace _01_basic_types
 
 
 
-
-
-
-#### Day 01 - 11.05.2018
+## Day 01 - 11.05.2018 <a id="Day 01 - 11.05.2018"></a>
 ```csharp
 using System;
 
@@ -134,10 +130,7 @@ namespace _02_basic_types
 
 
 
-
-
-
-#### 00_Basic string and debugging
+## 00_Basic string and debugging <a id="00_Basic string and debugging"></a>
 ```csharp
 using System;
 
@@ -178,10 +171,7 @@ namespace Basic_string_and_debugging
 
 
 
-
-
-
-#### 01_Mul function example
+## 01_Mul function example <a id="01_Mul function example"></a>
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -220,10 +210,7 @@ namespace Mul_function_example
 
 
 
-
-
-
-#### 02_Conditins
+## 02_Conditins <a id="02_Conditins"></a>
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -313,10 +300,7 @@ num1 < num2
 
 
 
-
-
-
-#### 03_Short conditation
+## 03_Short conditation <a id="03_Short conditation"></a>
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -349,10 +333,7 @@ namespace Short_conditation
 
 
 
-
-
-
-#### 04_switch case
+## 04_switch case <a id="04_switch case"></a>
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -395,10 +376,7 @@ namespace Switch_Case
 
 
 
-
-
-
-#### 05_Foreach loop
+## 05_Foreach loop <a id="05_Foreach loop"></a>
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -468,10 +446,7 @@ t
 
 
 
-
-
-
-#### 06_loop exersice
+## 06_loop exersice <a id="06_loop exersice"></a>
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -511,10 +486,7 @@ namespace _06_loop_exersice
 
 
 
-
-
-
-#### 07_Array
+## 07_Array <a id="07_Array"></a>
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -562,10 +534,7 @@ namespace _07_Array
 
 
 
-
-
-
-#### 08_Array
+## 08_Array <a id="08_Array"></a>
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -619,10 +588,7 @@ namespace _08_Array
 
 
 
-
-
-
-#### 09_Matrix
+## 09_Matrix <a id="09_Matrix"></a>
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -666,10 +632,7 @@ namespace _09_Matrix
 
 
 
-
-
-
-#### 10_Nested loop exercise
+## 10_Nested loop exercise <a id="10_Nested loop exercise"></a>
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -723,14 +686,18 @@ namespace _10_Nested_Loop_exercise
 
 
 
-
-
-
-#### Desktop
+## Desktop <a id="Desktop"></a>
 ```csharp
 using System;
 
-
+/*
+ ����� ��������  - function overloading
+_________________________________________________
+1. �� ��������� ������ ����� ����� ���� ��
+2. �� ������� ����� ���� ���� ������� ���� �� ���� ���� ������� ��� ������ ������� �����
+3. ��� ����� ������ ���� - �� ���� ����� ������
+4. ���� ������� ����� - �� ������� �� ������   
+     */
 namespace _00_function_overloading
 {
     class Program
