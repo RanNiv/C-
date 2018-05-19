@@ -20,7 +20,7 @@
 
 
 
-## Day 01 - 11.05.2018 <a id="Day 01 - 1"></a>
+## Day 01 - 11.05.2018 <a id="Day_01_-_11.05.2018"></a>
 ```csharp
 using System;
 
@@ -50,7 +50,7 @@ namespace _01_basic_types
 
 
 
-## Day 01 - 11.05.2018 <a id="Day 01 - 1"></a>
+## Day 01 - 11.05.2018 <a id="Day_01_-_11.05.2018"></a>
 ```csharp
 using System;
 
@@ -147,7 +147,7 @@ namespace _02_basic_types
 
 
 
-## 00_Basic string and debugging <a id="00_Basic s"></a>
+## 00_Basic string and debugging <a id="00_Basic_string_and_debugging"></a>
 ```csharp
 using System;
 
@@ -188,7 +188,7 @@ namespace Basic_string_and_debugging
 
 
 
-## 01_Mul function example <a id="01_Mul fun"></a>
+## 01_Mul function example <a id="01_Mul_function_example"></a>
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -227,7 +227,7 @@ namespace Mul_function_example
 
 
 
-## 02_Conditins <a id="02_Conditi"></a>
+## 02_Conditins <a id="02_Conditins"></a>
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -317,7 +317,7 @@ num1 < num2
 
 
 
-## 03_Short conditation <a id="03_Short c"></a>
+## 03_Short conditation <a id="03_Short_conditation"></a>
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -350,7 +350,7 @@ namespace Short_conditation
 
 
 
-## 04_switch case <a id="04_switch "></a>
+## 04_switch case <a id="04_switch_case"></a>
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -393,7 +393,7 @@ namespace Switch_Case
 
 
 
-## 05_Foreach loop <a id="05_Foreach"></a>
+## 05_Foreach loop <a id="05_Foreach_loop"></a>
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -463,7 +463,7 @@ t
 
 
 
-## 06_loop exersice <a id="06_loop ex"></a>
+## 06_loop exersice <a id="06_loop_exersice"></a>
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -649,7 +649,7 @@ namespace _09_Matrix
 
 
 
-## 10_Nested loop exercise <a id="10_Nested "></a>
+## 10_Nested loop exercise <a id="10_Nested_loop_exercise"></a>
 ```csharp
 using System;
 using System.Collections.Generic;
