@@ -1,6 +1,6 @@
 # Table of Contents
-  * [Chapter 1](#00_Basic string and debugging)
-  * [Chapter 2](#06_loop exersice)
+  * [00_Basic string and debugging](#00_Basic string and debugging)
+  * [06_loop exersice](#06_loop exersice)
   
   
 
