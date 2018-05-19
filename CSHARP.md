@@ -130,7 +130,7 @@ namespace _02_basic_types
 
 
 
-## 00_Basic string and debugging <a id="00_Basic string and debugging"></a>
+## 00_Basic string and debugging <a id="#00_Basic string and debugging"></a>
 ```csharp
 using System;
 
@@ -446,7 +446,7 @@ t
 
 
 
-## 06_loop exersice <a id="06_loop exersice"></a>
+## 06_loop exersice <a id="#06_loop exersice"></a>
 ```csharp
 using System;
 using System.Collections.Generic;
