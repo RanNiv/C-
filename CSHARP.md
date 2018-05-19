@@ -133,8 +133,8 @@ namespace _02_basic_types
 
 
 
-<a name="headers"/>
-## Headers
+## Headers <a name="headers"/>
+
 #### 00_Basic string and debugging
 ```csharp
 using System;
