@@ -4,6 +4,7 @@
 
 
 
+####Day 01 - 11.05.2018
 ```csharp
 using System;
 
@@ -29,12 +30,14 @@ namespace _01_basic_types
     }
 }
 
+```
 
 
 
 
 
 
+####Day 01 - 11.05.2018
 ```csharp
 using System;
 
@@ -127,12 +130,14 @@ namespace _02_basic_types
     }
 }
 
+```
 
 
 
 
 
 
+####00_Basic string and debugging
 ```csharp
 using System;
 
@@ -169,12 +174,14 @@ namespace Basic_string_and_debugging
     }
 }
 
+```
 
 
 
 
 
 
+####01_Mul function example
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -209,12 +216,14 @@ namespace Mul_function_example
     }
 }
 
+```
 
 
 
 
 
 
+####02_Conditins
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -300,12 +309,14 @@ num1 < num2
 (num1 == num2) || (num1 < num2)
 */
 
+```
 
 
 
 
 
 
+####03_Short conditation
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -334,12 +345,14 @@ namespace Short_conditation
     }
 }
 
+```
 
 
 
 
 
 
+####04_switch case
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -378,12 +391,14 @@ namespace Switch_Case
     }
 }
 
+```
 
 
 
 
 
 
+####05_Foreach loop
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -449,12 +464,14 @@ s
 t
  */
 
+```
 
 
 
 
 
 
+####06_loop exersice
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -490,12 +507,14 @@ namespace _06_loop_exersice
     }
 }
 
+```
 
 
 
 
 
 
+####07_Array
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -539,12 +558,14 @@ namespace _07_Array
     }
 }
 
+```
 
 
 
 
 
 
+####08_Array
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -594,12 +615,14 @@ namespace _08_Array
     }
 }
 
+```
 
 
 
 
 
 
+####09_Matrix
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -639,12 +662,14 @@ namespace _09_Matrix
     }
 }
 
+```
 
 
 
 
 
 
+####10_Nested loop exercise
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -694,3 +719,4 @@ namespace _10_Nested_Loop_exercise
     }
 }
 
+```
