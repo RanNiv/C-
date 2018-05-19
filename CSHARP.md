@@ -1,13 +1,12 @@
-# Table of Contents
-[00_Basic string and debugging](#00_Basic string and debugging)
-[06_loop exersice](#06_loop exersice)
-  
-  
 ##### Table of Contents  
-[00_Basic string and debugging](#00_Basic string and debugging)  
-[#06_loop exersice](#06_loop exersice)  
+[Headers](#headers)  
+[Emphasis](#emphasis)  
+...snip...    
+<a name="headers"/>
+## Headers
 
-
+<a name="emphasis"/>
+## emphasis
 
 
 ## Day 01 - 11.05.2018 <a id="Day 01 - 11.05.2018"></a>
