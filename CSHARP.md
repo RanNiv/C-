@@ -1,6 +1,6 @@
-##### Table of Contents  
-[Basic string and debugging](#Basic string and debugging)  
 
+##### Table of Contents  
+[00_Basic string and debugging](#00_Basic string and debugging)  
 
 
 #### Day 01 - 11.05.2018
@@ -33,6 +33,7 @@ namespace _01_basic_types
 
 
 
+<a name="Day 01 - 11.05.2018"/>
 #### Day 01 - 11.05.2018
 ```csharp
 using System;
@@ -130,7 +131,7 @@ namespace _02_basic_types
 
 
 
-<a name="Basic string and debugging"/>
+<a name="00_Basic string and debugging"/>
 #### 00_Basic string and debugging
 ```csharp
 using System;
