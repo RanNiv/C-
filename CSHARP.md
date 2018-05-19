@@ -1,6 +1,8 @@
-
 ##### Table of Contents  
-[00_Basic string and debugging](#00_Basic string and debugging)  
+[Headers](#headers)  
+[Emphasis](#emphasis)  
+...snip...    
+
 
 
 #### Day 01 - 11.05.2018
@@ -131,7 +133,8 @@ namespace _02_basic_types
 
 
 
-<a name="00_Basic string and debugging"/>
+<a name="headers"/>
+## Headers
 #### 00_Basic string and debugging
 ```csharp
 using System;
