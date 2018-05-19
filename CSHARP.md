@@ -1,15 +1,10 @@
 ##### Table of Contents  
-[Headers](#headers)  
-[Emphasis](#emphasis)  
-...snip...    
-<a name="headers"/>
-## Headers
-
-<a name="emphasis"/>
-## emphasis
+[00_Basic string and debugging](#00_Basic string and debugging)  
+[01_Mul function example](#01_Mul function example)  
 
 
-## Day 01 - 11.05.2018 <a id="Day 01 - 11.05.2018"></a>
+<a name="Day 01 - 11.05.2018"/>
+#### Day 01 - 11.05.2018
 ```csharp
 using System;
 
@@ -39,7 +34,8 @@ namespace _01_basic_types
 
 
 
-## Day 01 - 11.05.2018 <a id="Day 01 - 11.05.2018"></a>
+<a name="Day 01 - 11.05.2018"/>
+#### Day 01 - 11.05.2018
 ```csharp
 using System;
 
@@ -136,7 +132,8 @@ namespace _02_basic_types
 
 
 
-## 00_Basic string and debugging <a id="00_Basic string and debugging"></a>
+<a name="00_Basic string and debugging"/>
+#### 00_Basic string and debugging
 ```csharp
 using System;
 
@@ -177,7 +174,8 @@ namespace Basic_string_and_debugging
 
 
 
-## 01_Mul function example <a id="01_Mul function example"></a>
+<a name="01_Mul function example"/>
+#### 01_Mul function example
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -216,7 +214,8 @@ namespace Mul_function_example
 
 
 
-## 02_Conditins <a id="02_Conditins"></a>
+<a name="02_Conditins"/>
+#### 02_Conditins
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -306,7 +305,8 @@ num1 < num2
 
 
 
-## 03_Short conditation <a id="03_Short conditation"></a>
+<a name="03_Short conditation"/>
+#### 03_Short conditation
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -339,7 +339,8 @@ namespace Short_conditation
 
 
 
-## 04_switch case <a id="04_switch case"></a>
+<a name="04_switch case"/>
+#### 04_switch case
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -382,7 +383,8 @@ namespace Switch_Case
 
 
 
-## 05_Foreach loop <a id="05_Foreach loop"></a>
+<a name="05_Foreach loop"/>
+#### 05_Foreach loop
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -452,7 +454,8 @@ t
 
 
 
-## 06_loop exersice <a id="06_loop exersice"></a>
+<a name="06_loop exersice"/>
+#### 06_loop exersice
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -492,7 +495,8 @@ namespace _06_loop_exersice
 
 
 
-## 07_Array <a id="07_Array"></a>
+<a name="07_Array"/>
+#### 07_Array
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -540,7 +544,8 @@ namespace _07_Array
 
 
 
-## 08_Array <a id="08_Array"></a>
+<a name="08_Array"/>
+#### 08_Array
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -594,7 +599,8 @@ namespace _08_Array
 
 
 
-## 09_Matrix <a id="09_Matrix"></a>
+<a name="09_Matrix"/>
+#### 09_Matrix
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -638,7 +644,8 @@ namespace _09_Matrix
 
 
 
-## 10_Nested loop exercise <a id="10_Nested loop exercise"></a>
+<a name="10_Nested loop exercise"/>
+#### 10_Nested loop exercise
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -692,7 +699,8 @@ namespace _10_Nested_Loop_exercise
 
 
 
-## Desktop <a id="Desktop"></a>
+<a name="Desktop"/>
+#### Desktop
 ```csharp
 using System;
 
