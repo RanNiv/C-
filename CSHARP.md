@@ -7,7 +7,7 @@
 * [03_Short conditation](#03_Short conditation)
 * [04_switch case](#04_switch case)
 * [05_Foreach loop](#05_Foreach loop)
-* [06_loop exersice](#06_loop exersice)
+* [06_loop exersice](#06_loop)
 * [07_Array](#07_Array)
 * [08_Array](#08_Array)
 * [09_Matrix](#09_Matrix)
@@ -463,7 +463,7 @@ t
 
 
 
-## 06_loop exersice <a id="06_loop exersice"></a>
+## 06_loop exersice <a id="06_loop"></a>
 ```csharp
 using System;
 using System.Collections.Generic;
