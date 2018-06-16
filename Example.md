@@ -1,5 +1,5 @@
 ### stage 1
-Base Class has no constructor
+Base Class have no constructor
 ```csharp
      public class Employee
     {
@@ -22,7 +22,7 @@ and can't change the readonly field
 ```  
 
 ### stage 2
-Base Class has  constructor 
+Base Class have a constructor 
 
 recall that once you add a custom constructor to a class definition, the default constructor is
 silently removed. Therefore, be sure to redefine the default constructor. For example:
