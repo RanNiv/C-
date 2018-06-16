@@ -71,8 +71,8 @@ in this manner during the examination of polymorphism, later in this chapter.
             this.Bonus = b;
         }
     }
-    ```
-    ###The protected Keyword
+ ```
+ ### The protected Keyword
  As you already know, public items are directly accessible from anywhere, while private items can only be
 accessed by the class that has defined them. provides an additional keyword to define member accessibility: protected.
 When a base class defines protected data or protected members, it establishes a set of items that can
