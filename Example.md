@@ -45,8 +45,7 @@ but can not access the base class private fields
 private members can only be accessed by the class that defines it.
 
 You may use the base keyword whenever a subclass wishes to access a public or protected member
-defined by a parent class. Use of this keyword is not limited to constructor logic. You will see examples using base
-in this manner during the examination of polymorphism, later in this chapter.
+defined by a parent class. Use of this keyword is not limited to constructor logic. 
 
 ```csharp
    public class Employee
@@ -87,6 +86,7 @@ protected float currPay;
 protected int empAge;
 protected string empSSN;
 }
+```
 
 
 
