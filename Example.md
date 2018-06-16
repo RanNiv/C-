@@ -77,15 +77,16 @@ accessed by the class that has defined them. provides an additional keyword to d
 When a base class defines protected data or protected members, it establishes a set of items that can
 be accessed directly by any descendent.
 ```charp
-partial class Employee
-{
-// Derived classes can now directly access this information.
-protected string empName;
-protected int empID;
-protected float currPay;
-protected int empAge;
-protected string empSSN;
-}
+    partial class Employee
+    {
+        // Derived classes can now directly access this information.
+        protected string empName;
+        protected int empID;
+        protected float currPay;
+        protected int empAge;
+        protected string empSSN;
+     }
+
 ```
 
 
