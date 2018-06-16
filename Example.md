@@ -76,7 +76,7 @@ defined by a parent class. Use of this keyword is not limited to constructor log
 accessed by the class that has defined them. provides an additional keyword to define member accessibility: protected.
 When a base class defines protected data or protected members, it establishes a set of items that can
 be accessed directly by any descendent.
-```charp
+```csharp
     partial class Employee
     {
         // Derived classes can now directly access this information.
@@ -86,7 +86,6 @@ be accessed directly by any descendent.
         protected int empAge;
         protected string empSSN;
      }
-
 ```
 
 
