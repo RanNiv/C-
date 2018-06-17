@@ -111,7 +111,6 @@ The next few sections cover accessing an object by using a reference to the base
 object. We’ll start by looking at the two lines of code that follow, which declare references to objects.</p>
 ```csharp
 MyDerivedClass derived = new MyDerivedClass(); // Create an object.
-MyBaseClass mybc = (MyBaseClass)derived; // Cast the reference.
 ```
          
          
