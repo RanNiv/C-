@@ -106,13 +106,111 @@ part.
 If you have a reference to a derived class object, you can get a reference to just the base class part of
 the object by casting the reference to the type of the base class by using the cast operator. The cast
 operator is placed in front of the object reference and consists of a set of parentheses containing the
-name of the class being cast to. Casting is covered in detail in Chapter 16.
+name of the class being cast to. 
 The next few sections cover accessing an object by using a reference to the base class part of the
 object. We’ll start by looking at the two lines of code that follow, which declare references to objects.
 ```csharp
-MyDerivedClass derived = new MyDerivedClass(); // Create an object.
-MyBaseClass mybc = (MyBaseClass) derived; // Cast the reference.
+class MyBaseClass
+{
+public void Print()
+{
+Console.WriteLine("This is the base class.");
+}
+}
+class MyDerivedClass : MyBaseClass
+{
+new public void Print()
+{
+Console.WriteLine("This is the derived class.");
+}
+}
+class Program
+{
+static void Main()
+{
+MyDerivedClass derived = new MyDerivedClass();
+MyBaseClass mybc = (MyBaseClass)derived;
+//↑
+//Cast to base class
+derived.Print(); // Call Print from derived portion.
+mybc.Print(); // Call Print from base portion.
+}
+}
 ```
-         
-         
-         
+<p>This code produces the following output:</p>
+<p>This is the derived class.</p>
+<p>This is the base class.</p>
+
+### Virtual and Override Methods
+
+Virtual methods allow a reference to the
+base class to access “up into” the derived class.
+You can use a reference to a base class to call a method in the derived class if the following are true:
+* The method in the derived class and the method in the base class each have the
+same signature and return type.
+* The method in the base class is labeled virtual.
+* The method in the derived class is labeled override.
+
+For example, the following code shows the virtual and override modifiers on the methods in the
+base class and derived class:
+```charp
+class MyBaseClass // Base class
+{
+virtual public void Print()
+↑
+...
+class MyDerivedClass : MyBaseClass // Derived class
+{
+override public void Print()
+}
+```
+When the Print method is called by using the reference to the base class (mybc),
+the method call is passed up to the derived class and executed, because
+* The method in the base class is marked as virtual.
+* There is a matching override method in the derived class.
+
+The following code is the same as in the previous section, but this time, the methods are labeled
+virtual and override. This produces a result that is very different from that of the previous example. In
+this version, calling the method through the base class invokes the method in the derived class.
+```charp
+class MyBaseClass
+{
+virtual public void Print()
+{
+Console.WriteLine("This is the base class.");
+}
+}
+class MyDerivedClass : MyBaseClass
+{
+override public void Print()
+{
+Console.WriteLine("This is the derived class.");
+}
+}
+class Program
+{
+static void Main()
+{
+MyDerivedClass derived = new MyDerivedClass();
+MyBaseClass mybc = (MyBaseClass)derived;
+↑
+derived.Print(); Cast to base class
+mybc.Print();
+}
+}
+```
+<p>This code produces the following output:</p>
+<p>This is the derived class.</p>
+<p>This is the derived class.</p>
+
+Other important things to know about the virtual and override modifiers are the following:
+* The overriding and overridden methods must have the same accessibility. In other
+words, the overridden method cannot be, for example, private, and the overriding
+method public.
+* You cannot override a method that is static or is not declared as virtual.
+* Methods, properties, and indexers (which I covered in the preceding chapter), and
+another member type, called an event, can all be
+declared virtual and override.
+
+
+
