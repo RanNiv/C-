@@ -92,7 +92,27 @@ class Program
 <p>This code produces the following output:</p>
 OtherClass.Method1: OtherClass Field1
 
-
+* Base Access
+If your derived class absolutely must access a hidden inherited member, you can access it by using a
+base access expression. This expression consists of the keyword base, followed immediately by a period
+and the name of the member, as shown here:
+```csharp
+Console.WriteLine("{0}", base.Field1);
+```
+* Using References to a Base Class
+<p>An instance of a derived class consists of an instance of the base class plus the additional members of the
+derived class. A reference to the derived class points to the whole class object, including the base class
+part.
+If you have a reference to a derived class object, you can get a reference to just the base class part of
+the object by casting the reference to the type of the base class by using the cast operator. The cast
+operator is placed in front of the object reference and consists of a set of parentheses containing the
+name of the class being cast to. Casting is covered in detail in Chapter 16.
+The next few sections cover accessing an object by using a reference to the base class part of the
+object. We’ll start by looking at the two lines of code that follow, which declare references to objects.</p>
+```csharp
+MyDerivedClass derived = new MyDerivedClass(); // Create an object.
+MyBaseClass mybc = (MyBaseClass) derived; // Cast the reference.
+```
          
          
          
