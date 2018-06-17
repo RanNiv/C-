@@ -53,6 +53,7 @@ the new modifier. Without it, the program will compile successfully, but the
 compiler will warn you that you’re hiding an inherited member.
    * You can also mask static members.
    <p>In the following code, OtherClass derives from SomeClass but hides both its inherited members.</p>
+   
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -88,7 +89,7 @@ class Program
 
 }
 ```
-This code produces the following output:
+<p>This code produces the following output:</p>
 OtherClass.Method1: OtherClass Field1
 
 
