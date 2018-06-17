@@ -1,1 +1,4 @@
-###Class Inheritance
+### Class Inheritance
+You can use an existing class, called the base class, as the basis for a new class,
+called the derived class. The members of the derived class consist of the following:
+
