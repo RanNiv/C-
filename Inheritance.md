@@ -43,7 +43,7 @@ although perfect for the class in which it is declared, may not do exactly what 
 class. In such a case, what you want to do is to mask the base class method with a new member declared
 in the derived class. Some important aspects of masking a base class member in a derived class are the
 following:</p>
-   * To mask an inherited data member, declare a new member of the same type and
+To mask an inherited data member, declare a new member of the same type and
 with the same name.
    * To mask an inherited function member, declare a new function member with the
 same signature. Remember that the signature consists of the name and parameter
