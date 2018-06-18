@@ -36,10 +36,10 @@ forms are semantically equivalent.
   * A class declaration can have only a single class listed in its class-base specification.
     This is called single inheritance.
   * Although a class can directly inherit from only a single base class, there is no limit
-  * Inheritance preserves encapsulation. private members can only be accessed by the class that defines it.
-to the level of derivation. That is, the class listed as the base class might be derived
+  to the level of derivation. That is, the class listed as the base class might be derived
 from another class, which is derived from another class, and so forth, until you
 eventually reach object.
+  * Inheritance preserves encapsulation. private members can only be accessed by the class that defines them.
 
 * Masking Members of a Base Class
 <p>A derived class cannot delete any of the members it has inherited; it can, however, mask a base class
