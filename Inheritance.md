@@ -93,7 +93,6 @@ class Program
         oc.Method1(oc.Field1); // Use the masking member.
     }
 }
-
 }
 ```
 <p>This code produces the following output:</p>
@@ -123,7 +122,6 @@ public void Print()
 {
 Console.WriteLine("This is the base class.");
 }
-
 }
 class MyDerivedClass : MyBaseClass
 {
@@ -366,8 +364,6 @@ This code produces the following output:
             ItemList.Add("Item3");
         }
     }
-
-
     public class Fruits : Groceries
     {
         public override void CreateList()
@@ -391,8 +387,6 @@ This code produces the following output:
             ItemList.Add("Melon");
         }
     }
-
-
 
     public partial class MainWindow : Window
     {
