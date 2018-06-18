@@ -350,9 +350,9 @@ This code produces the following output:
 10
 10
 
-### Gereral Example using virtual Methods
+### Gereral Example using virtual Methods 
 ```csharp
-    public class Groceries
+public class Groceries
     {
         public List<string> ItemList = new List<string>();
         public virtual void CreateList()
@@ -364,6 +364,8 @@ This code produces the following output:
             ItemList.Add("Item3");
         }
     }
+
+
     public class Fruits : Groceries
     {
         public override void CreateList()
@@ -376,9 +378,9 @@ This code produces the following output:
         }
     }
 
-    public class SumerFruits : Groceries
+    public class SumerFruits : Fruits
     {
-        public override void CreateList()
+      new  public  void CreateList()
         {
             ItemList.Add("SumerFruits");
             ItemList.Add("---------");
@@ -387,6 +389,8 @@ This code produces the following output:
             ItemList.Add("Melon");
         }
     }
+
+
 
     public partial class MainWindow : Window
     {
@@ -409,6 +413,7 @@ This code produces the following output:
             DisplayGroceries(Gr);
         }
     }
-    ```
-
+}
+```
+The class thats create the list is - Fruits class
 
