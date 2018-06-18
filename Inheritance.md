@@ -150,7 +150,7 @@ You can use a reference to a base class to call a method in the derived class if
 same signature and return type.
 * The method in the base class is labeled virtual.
 * The method in the derived class is labeled override.
-* `virtual or abstract members cannot be private`
+* ##### `virtual or abstract members cannot be private`
 
 For example, the following code shows the virtual and override modifiers on the methods in the
 base class and derived class:
