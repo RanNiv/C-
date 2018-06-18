@@ -350,7 +350,7 @@ This code produces the following output:
 10
 10
 
-### Gereral Example using virtual Methods 
+### Another Example using virtual Methods 
 ```csharp
 public class Groceries
     {
