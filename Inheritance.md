@@ -1,8 +1,14 @@
 ### Class Inheritance
 
-<details>
-<summary>Main Info</summary>
 <p>Inheritance allows you to define a new class that incorporates and extends an already declared class.</p>
+<p>inheritance is the aspect of OOP that facilitates code reuse. Specifically
+speaking, code reuse comes in two flavors: inheritance (the “is-a” relationship) and the
+containment/delegation model (the “has-a” relationship). Let’s begin this chapter by examining the
+classical inheritance model of the “is-a” relationship.
+When you establish “is-a” relationships between classes, you are building a dependency between
+two or more class types. The basic idea behind classical inheritance is that new classes can be created
+using existing classes as a starting point.</p>
+
 • You can use an existing class, called the base class, as the basis for a new class,
 called the derived class. The members of the derived class consist of the following:
 − The members in its own declaration
@@ -15,7 +21,7 @@ base class listed.</p>
 the base class plus any additional functionality provided in its own declaration.<p>
 
 <p>Inherited members are accessed just as if they had been declared in the derived class itself.</p>
- </details>
+
          
 * All Classes Are Derived from Class object
 
@@ -30,6 +36,7 @@ forms are semantically equivalent.
   * A class declaration can have only a single class listed in its class-base specification.
     This is called single inheritance.
   * Although a class can directly inherit from only a single base class, there is no limit
+  * Inheritance preserves encapsulation. private members can only be accessed by the class that defines it.
 to the level of derivation. That is, the class listed as the base class might be derived
 from another class, which is derived from another class, and so forth, until you
 eventually reach object.
@@ -116,6 +123,7 @@ public void Print()
 {
 Console.WriteLine("This is the base class.");
 }
+
 }
 class MyDerivedClass : MyBaseClass
 {
@@ -130,7 +138,7 @@ static void Main()
 {
 MyDerivedClass derived = new MyDerivedClass();
 MyBaseClass mybc = (MyBaseClass)derived;
-//↑
+
 //Cast to base class
 derived.Print(); // Call Print from derived portion.
 mybc.Print(); // Call Print from base portion.
@@ -154,17 +162,17 @@ same signature and return type.
 
 For example, the following code shows the virtual and override modifiers on the methods in the
 base class and derived class:
-```charp
-class MyBaseClass // Base class
+```csharp
+class MyBaseClass
 {
 virtual public void Print()
-↑
-...
-class MyDerivedClass : MyBaseClass // Derived class
+}
+
+class MyDerivedClass : MyBaseClass
 {
 override public void Print()
 }
-```
+
 When the Print method is called by using the reference to the base class (mybc),
 the method call is passed up to the derived class and executed, because
 * The method in the base class is marked as virtual.
@@ -213,5 +221,200 @@ method public.
 another member type, called an event, can all be
 declared virtual and override.
 
+* When you use a reference to the base class part of an object to call an overridden
+method, the method call is passed up the derivation hierarchy for execution to the
+most-derived version of the method marked as override.
+* If there are other declarations of the method at higher levels of derivation that are
+not marked as override, they are not invoked.
+
+For example, the following code shows three classes that form an inheritance hierarchy:
+MyBaseClass, MyDerivedClass, and SecondDerived. All three classes contain a method named Print, with
+the same signature. In MyBaseClass, Print is labeled virtual. In MyDerivedClass, it’s labeled override. In
+class SecondDerived, you can declare method Print with either override or new
+```csharp
+class MyBaseClass // Base class
+{
+virtual public void Print()
+{ Console.WriteLine("This is the base class."); }
+}
+class MyDerivedClass : MyBaseClass // Derived class
+{
+override public void Print()
+{ Console.WriteLine("This is the derived class."); }
+}
+class SecondDerived : MyDerivedClass // Most-derived class
+{
+... // Given in the following pages
+}
+```
+If you declare the Print method of SecondDerived as override, then it will override both the less-derived
+versions of the method, as shown in Figure 7-9. If a reference to the base class is used to call Print, it gets
+passed all the way up the chain to the implementation in class SecondDerived.
+
+The following code implements this case. Notice the code in the last two lines of method Main.
+* The first of the two statements calls the Print method by using a reference to the
+most-derived class—SecondDerived. This is not calling through a reference to the
+base class portion, so it will call the method implemented in SecondDerived.
+* The second statement, however, calls the Print method by using a reference to the
+base class—MyBaseClass.
+
+```csharp
+class SecondDerived : MyDerivedClass
+{
+override public void Print() {
+↑ Console.WriteLine("This is the second derived class.");
+}
+}
+class Program
+{
+static void Main()
+{
+SecondDerived derived = new SecondDerived(); // Use SecondDerived.
+MyBaseClass mybc = (MyBaseClass)derived; // Use MyBaseClass.
+derived.Print();
+mybc.Print();
+}
+}
+```
+The result is that regardless of whether Print is called through the derived class or the base class, the
+method in the most-derived class is called. When called through the base class, it’s passed up the
+inheritance hierarchy. This code produces the following output:
+
+This is the second derived class.
+This is the second derived class.
+
+If instead you declare the Print method of SecondDerived as new, the result is as shown in Figure 7-10.
+Main is the same as in the previous case.
+
+```csharp
+class SecondDerived : MyDerivedClass
+{
+new public void Print()
+{
+Console.WriteLine("This is the second derived class.");
+}
+}
+class Program
+{
+static void Main() // Main
+{
+SecondDerived derived = new SecondDerived(); // Use SecondDerived.
+MyBaseClass mybc = (MyBaseClass)derived; // Use MyBaseClass.
+derived.Print();
+mybc.Print();
+}
+}
+```
+The result is that when method Print is called through the reference to SecondDerived, the method
+in SecondDerived is executed, as you would expect. When the method is called through a reference to
+MyBaseClass, however, the method call is passed up only one level, to class MyDerived, where it is
+executed. The only difference between the two cases is whether the method in SecondDerived is declared
+with modifier override or modifier new.
+This code produces the following output:
+This is the second derived class.
+This is the derived class.
+
+### Overriding Other Member Types
+
+In the previous few sections, you’ve seen how the virtual/override designations work on methods.
+These work exactly the same way with properties, events, and indexers. For example, the following code
+shows a read-only property named MyProperty using virtual/override.
+
+```csharp
+class MyBaseClass
+{
+private int _myInt = 5;
+virtual public int MyProperty
+{
+get { return _myInt; }
+}
+}
+class MyDerivedClass : MyBaseClass
+{
+private int _myInt = 10;
+override public int MyProperty
+{
+get { return _myInt; }
+}
+}
+class Program
+{
+static void Main()
+{
+MyDerivedClass derived = new MyDerivedClass();
+MyBaseClass mybc = (MyBaseClass)derived;
+Console.WriteLine( derived.MyProperty );
+Console.WriteLine( mybc.MyProperty );
+}
+}
+```
+This code produces the following output:
+10
+10
+
+### Gereral Example using virtual Methods
+```csharp
+    public class Groceries
+    {
+        public List<string> ItemList = new List<string>();
+        public virtual void CreateList()
+        {
+            ItemList.Add("Items");
+            ItemList.Add("---------");
+            ItemList.Add("Item1");
+            ItemList.Add("Item2");
+            ItemList.Add("Item3");
+        }
+    }
+
+
+    public class Fruits : Groceries
+    {
+        public override void CreateList()
+        {
+            ItemList.Add("Fruits");
+            ItemList.Add("---------");
+            ItemList.Add("Apple");
+            ItemList.Add("Orange");
+            ItemList.Add("Lemon");
+        }
+    }
+
+    public class SumerFruits : Groceries
+    {
+        public override void CreateList()
+        {
+            ItemList.Add("SumerFruits");
+            ItemList.Add("---------");
+            ItemList.Add("Watermelon");
+            ItemList.Add("Peach");
+            ItemList.Add("Melon");
+        }
+    }
+
+
+
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+
+        private void DisplayGroceries(Groceries G)
+        {
+            G.CreateList();
+            l1.ItemsSource = G.ItemList;
+
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            //Groceries Gr = new Groceries();
+            SumerFruits Gr = new SumerFruits();
+            DisplayGroceries(Gr);
+        }
+    }
+    ```
 
 
