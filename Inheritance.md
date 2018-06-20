@@ -417,3 +417,149 @@ public class Groceries
 ```
 The class thats create the list is - Fruits class
 
+### Constructor Execution
+
+Constructor executes code that prepares a class for use.This
+includes initializing both the static and instance members of the class.
+* To create the base class part of an object, a constructor for the base class is
+implicitly called as part of the process of creating the instance.
+* Each class in the inheritance hierarchy chain executes its base class constructor
+before it executes its own constructor body.
+For example, the following code shows a declaration of class MyDerivedClass and its constructor.
+When the constructor is called, it calls the parameterless constructor MyBaseClass() before executing its
+own body.
+```csharp
+class MyDerivedClass : MyBaseClass
+{
+MyDerivedClass() // Constructor uses base constructor MyBaseClass()
+    {
+    ...
+    }
+}
+```
+When an instance is being created, one of the first
+things that’s done is the initialization of all the instance members of the object. After that, the base class
+constructor is called. Only then is the body of the constructor of the class itself executed.
+
+For example, in the following code, the values of MyField1 and MyField2 would be set to 5 and 0,
+respectively, before the base class constructor is called.
+```csharp
+class MyDerivedClass : MyBaseClass
+{
+int MyField1 = 5; // 1. Member initialized
+int MyField2; // Member initialized
+public MyDerivedClass() // 3. Body of constructor executed
+{
+...
+}
+}
+class MyBaseClass
+{
+public MyBaseClass() // 2. Base class constructor called
+{
+...
+}
+}
+```
+### Constructor Initializers
+
+By default, the parameterless constructor of the base class is called when an object is being constructed.
+But constructors can be overloaded, so a base class might have more than one. If you want your derived
+class to use a specific base class constructor other than the parameterless constructor, you must specify
+it in a constructor initializer.
+There are two forms of constructor initializers:
+* The first form uses the keyword base and specifies which base class constructor to
+use.
+* The second form uses the keyword this and specifies which other constructor
+from this class should be used.
+
+A base class constructor initializer is placed after a colon following the parameter list in a class’s
+constructor declaration. The constructor initializer consists of the keyword base and the parameter list
+of the base constructor to call.
+For example, the following code shows a constructor for class MyDerivedClass.
+* The constructor initializer specifies that the construction process should call the
+base class constructor with two parameters, where the first parameter is a string
+and the second parameter is an int.
+* The parameters in the base parameter list must match the intended base
+constructor’s parameter list in type and order.
+```csharp
+public MyDerivedClass( int x, string s ) : base( s, x )
+{ 
+}
+```
+When you declare a constructor without a constructor initializer, it’s a shortcut for the form with
+a constructor initializer consisting of base(), as illustrated in Figure 7-12. The two forms are
+semantically equivalent.
+```csharp
+public MyDerived : MyBase
+{ 
+    //constructor implicitly using base constructor MyBase ()
+    MyDefivedClass
+    {
+
+    }
+}
+
+
+public MyDerived : MyBase
+{ 
+    //constructor Explicitly using base constructor MyBase ()
+    MyDefivedClass :base()
+    {
+
+    }
+}
+```
+The other form of constructor initializer instructs the construction process (actually, the compiler)
+to use a different constructor from the same class. For example, the following shows a constructor with a
+single parameter for class MyClass. That single-parameter constructor, however, uses a constructor from
+the same class, but with two parameters, supplying a default parameter as the second one.
+```csharp
+public MyClass(int x): this(x, "Using Default String")
+{ ↑
+... Keyword
+}
+```
+Another situation where this comes in particularly handy is where you have several constructors for
+a class, and they have common code that should always be performed at the beginning of the object
+construction process. In this case, you can factor out that common code and place it in a constructor
+that is used as a constructor initializer by all the other constructors. In fact, this is a suggested practice
+since it reduces code duplication.
+You might think that you could just declare another method that performs those common
+initializations and have all the constructors call that method. This isn’t as good for several reasons. The
+first is that the compiler can optimize certain things when it knows a method is a constructor. The
+second is that there are some things that can be done only in a constructor and not elsewhere. For
+example, in the previous chapter you learned that readonly fields can be initialized only inside a
+constructor. You will get a compiler error if you attempt to initialize a readonly field in any other
+method, even if that method is called by a constructor only.
+
+initializes everything in the class that needs to be initialized, then it’s perfectly fine to leave it as a
+public constructor.
+What if, however, it doesn’t completely initialize an object? In that case, you mustn’t allow that
+constructor to be callable from outside the class, since it would then create incompletely initialized
+objects. To avoid that problem, you can declare the constructor private instead of public, and only have
+it be used by the other constructors. The following code illustrates this usage:
+```charp
+class MyClass
+{
+readonly int firstVar;
+readonly double secondVar;
+public string UserName;
+public int UserIdNumber;
+private MyClass( ) // Private constructor performs initializations
+{ // common to the other constructors
+firstVar = 20;
+secondVar = 30.5;
+}
+public MyClass( string firstName ) : this() // Use constructor initializer
+{
+UserName = firstName;
+UserIdNumber = -1;
+}
+public MyClass( int idNumber ) : this( ) // Use constructor initializer
+{
+UserName = "Anonymous";
+UserIdNumber = idNumber;
+}
+}
+```
