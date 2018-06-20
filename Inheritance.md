@@ -539,7 +539,7 @@ What if, however, it doesn’t completely initialize an object? In that case, yo
 constructor to be callable from outside the class, since it would then create incompletely initialized
 objects. To avoid that problem, you can declare the constructor private instead of public, and only have
 it be used by the other constructors. The following code illustrates this usage:
-```charp
+```csharp
 class MyClass
 {
 readonly int firstVar;
@@ -562,4 +562,4 @@ UserName = "Anonymous";
 UserIdNumber = idNumber;
 }
 }
-```
+
