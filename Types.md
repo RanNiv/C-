@@ -103,11 +103,12 @@ constructors." Type constructors should be private to prevent any developer-writ
 calling them; the CLR is always capable of calling a type constructor.
 ### readonly fields
 
-The CLR supports readonly fields and read/write fields. Most fields are read/write fields,
-meaning the field’s value might change multiple times as the code executes. However, readonly fields
-can be written to only within a constructor method (which is called only once, when an object is first
-created). Compilers and verification ensure that readonly fields are not written to by any method
-other than a constructor. Note that reflection can be used to modify a readonly field.
+The readonly keyword is a modifier that you can use on fields. When a field declaration includes a readonly modifier, assignments to the fields introduced by the declaration can only occur as part of the declaration or in a constructor in the same class.
+
+You can assign a value to a readonly field only in the following contexts:
+* When the variable is initialized in the declaration, for example:
+* For an instance field, in the instance constructors of the class that contains the field declaration, or for a static field, in the static constructor of the class that contains the field declaration. These are also the only contexts in which it is valid to pass a readonly field as an out or ref parameter.
+* The readonly keyword is different from the const keyword. A const field can only be initialized at the declaration of the field. A readonly field can be initialized either at the declaration or in a constructor. Therefore, readonly fields can have different values depending on the constructor used. Also, while a const field is a compile-time constant, the readonly field can be used for runtime constants
 
 **Important** When a field is of a reference type and the field is marked as readonly, it is the
 reference that is immutable, not the object that the field refers to. The following code demonstrates:
