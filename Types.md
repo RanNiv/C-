@@ -259,8 +259,8 @@ Console.WriteLine(v.Amount + v.Message);
 The most common scenario is to initialize an anonymous type with properties from another type. In the following example, assume that a class exists that is named Product. Class Product includes Color and Price properties, together with other properties that you are not interested in. Variable products is a collection of Product objects. The anonymous type declaration starts with the new keyword. The declaration initializes a new type that uses only two properties from Product. This causes a smaller amount of data to be returned in the query.</p>
 <p>If you do not specify member names in the anonymous type, the compiler gives the anonymous type members the same name as the property being used to initialize them. You must provide a name for a property that is being initialized with an expression, as shown in the previous example. In the following example, the names of the properties of the anonymous type are Color and Price.</p>
 <p>ypically, when you use an anonymous type to initialize a variable, you declare the variable as an implicitly typed local variable by using var. The type name cannot be specified in the variable declaration because only the compiler has access to the underlying name of the anonymous type. </p>
-### Remarks (Anonymous Types)
 
+### Remarks (Anonymous Types)
 Anonymous types are class types that derive directly from object, and that cannot be cast to any type except object. The compiler provides a name for each anonymous type, although your application cannot access it. From the perspective of the common language runtime, an anonymous type is no different from any other reference type.
 
 If two or more anonymous object initializers in an assembly specify a sequence of properties that are in the same order and that have the same names and types, the compiler treats the objects as instances of the same type. They share the same compiler-generated type information.
