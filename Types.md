@@ -269,4 +269,40 @@ You cannot declare a field, a property, an event, or the return type of a method
 
 Because the Equals and GetHashCode methods on anonymous types are defined in terms of the Equals and GetHashCode methods of the properties, two instances of the same anonymous type are equal only if all their properties are equal.
 
+### var (C# Reference)
 
+Beginning in Visual C# 3.0, variables that are declared at method scope can have an implicit "type" var. An implicitly typed local variable is strongly typed just as if you had declared the type yourself, but the compiler determines the type. The following two declarations of i are functionally equivalent:
+```csharp
+var i = 10; // Implicitly typed. 
+int i = 10; // Explicitly typed. 
+```
+### Example
+The following example shows two query expressions. In the first expression, the use of var is permitted but is not required, because the type of the query result can be stated explicitly as an IEnumerable<string>. However, in the second expression, var allows the result to be a collection of anonymous types, and the name of that type is not accessible except to the compiler itself. Use of var eliminates the requirement to create a new class for the result. Note that in Example #2, the foreach iteration variable item must also be implicitly typed.
+```csharp
+  // Example #1: var is optional because
+// the select clause specifies a string
+string[] words = { "apple", "strawberry", "grape", "peach", "banana" };
+var wordQuery = from word in words
+                where word[0] == 'g'
+                select word;
+
+// Because each element in the sequence is a string, 
+// not an anonymous type, var is optional here also.
+foreach (string s in wordQuery)
+{
+    Console.WriteLine(s);
+}
+
+// Example #2: var is required when
+// the select clause specifies an anonymous type
+var custQuery = from cust in customers
+                where cust.City == "Phoenix"
+                select new { cust.Name, cust.Phone };
+
+// var must be used because each item 
+// in the sequence is an anonymous type
+foreach (var item in custQuery)
+{
+    Console.WriteLine("Name={0}, Phone={1}", item.Name, item.Phone);
+}
+```
