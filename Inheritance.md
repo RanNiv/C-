@@ -14,23 +14,18 @@ called the derived class. The members of the derived class consist of the follow
 − The members of the base class
 <p> To declare a derived class, you add a class-base specification after the class name.
 The class-base specification consists of a colon, followed by the name of the class
-to be used as the base class. The derived class is said to directly inherit from the
-base class listed.</p>
+to be used as the base class.</p>
 <p>A derived class is said to extend its base class, because it includes the members of
 the base class plus any additional functionality provided in its own declaration.<p>
 
 <p>Inherited members are accessed just as if they had been declared in the derived class itself.</p>
-
          
 * All Classes Are Derived from Class object
 
 All classes, except the special class object, are derived classes, even if they don’t have a class-base
 specification. Class object is the only class that is not derived, since it is the base of the inheritance
 hierarchy.
-Classes without a class-base specification are implicitly derived directly from class object. Leaving
-off the class-base specification is just shorthand for specifying that object is the base class. The two
-forms are semantically equivalent.
-
+Classes without a class-base specification are implicitly derived directly from class object.
 * Other important facts about class derivation are the following
   * A class declaration can have only a single class listed in its class-base specification.
     This is called single inheritance.
@@ -109,37 +104,34 @@ An instance of a derived class consists of an instance of the base class plus th
 derived class. A reference to the derived class points to the whole class object, including the base class
 part.
 If you have a reference to a derived class object, you can get a reference to just the base class part of
-the object by casting the reference to the type of the base class by using the cast operator. The cast
-operator is placed in front of the object reference and consists of a set of parentheses containing the
-name of the class being cast to. 
+the object by casting the reference to the type of the base class by using the cast operator.
 The next few sections cover accessing an object by using a reference to the base class part of the
 object. We’ll start by looking at the two lines of code that follow, which declare references to objects.
 ```csharp
 class MyBaseClass
 {
-public void Print()
-{
-Console.WriteLine("This is the base class.");
+  public void Print()
+  {
+    Console.WriteLine("This is the base class.");
+  }
 }
-}
-class MyDerivedClass : MyBaseClass
-{
-new public void Print()
-{
-Console.WriteLine("This is the derived class.");
-}
+ class MyDerivedClass : MyBaseClass
+ {
+   new public void Print()
+ {
+   Console.WriteLine("This is the derived class.");
+ }
 }
 class Program
 {
-static void Main()
-{
-MyDerivedClass derived = new MyDerivedClass();
-MyBaseClass mybc = (MyBaseClass)derived;
-
-//Cast to base class
-derived.Print(); // Call Print from derived portion.
-mybc.Print(); // Call Print from base portion.
-}
+  static void Main()
+  {
+    MyDerivedClass derived = new MyDerivedClass();
+    MyBaseClass mybc = (MyBaseClass)derived;
+    //Cast to base class
+  derived.Print(); // Call Print from derived portion.
+  mybc.Print(); // Call Print from base portion.
+  }
 }
 ```
 <p>This code produces the following output:</p>
