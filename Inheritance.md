@@ -277,20 +277,20 @@ Main is the same as in the previous case.
 ```csharp
 class SecondDerived : MyDerivedClass
 {
-new public void Print()
-{
-Console.WriteLine("This is the second derived class.");
-}
+ new public void Print()
+ {
+ Console.WriteLine("This is the second derived class.");
+ }
 }
 class Program
 {
-static void Main() // Main
-{
-SecondDerived derived = new SecondDerived(); // Use SecondDerived.
-MyBaseClass mybc = (MyBaseClass)derived; // Use MyBaseClass.
-derived.Print();
-mybc.Print();
-}
+ static void Main() // Main
+ {
+ SecondDerived derived = new SecondDerived(); // Use SecondDerived.
+ MyBaseClass mybc = (MyBaseClass)derived; // Use MyBaseClass.
+ derived.Print();
+ mybc.Print();
+ }
 }
 ```
 The result is that when method Print is called through the reference to SecondDerived, the method
