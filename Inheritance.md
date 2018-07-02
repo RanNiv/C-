@@ -173,28 +173,28 @@ this version, calling the method through the base class invokes the method in th
 ```charp
 class MyBaseClass
 {
-virtual public void Print()
-{
-Console.WriteLine("This is the base class.");
-}
+ virtual public void Print()
+ {
+ Console.WriteLine("This is the base class.");
+ }
 }
 class MyDerivedClass : MyBaseClass
 {
-override public void Print()
-{
-Console.WriteLine("This is the derived class.");
-}
+ override public void Print()
+ {
+  Console.WriteLine("This is the derived class.");
+ }
 }
 class Program
 {
-static void Main()
-{
-MyDerivedClass derived = new MyDerivedClass();
-MyBaseClass mybc = (MyBaseClass)derived;
-↑
-derived.Print(); Cast to base class
+ static void Main()
+ {
+  MyDerivedClass derived = new MyDerivedClass();
+  MyBaseClass mybc = (MyBaseClass)derived;
+  
+ derived.Print(); Cast to base class
 mybc.Print();
-}
+ }
 }
 ```
 <p>This code produces the following output:</p>
