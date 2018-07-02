@@ -154,14 +154,14 @@ base class and derived class:
 ```csharp
 class MyBaseClass
 {
-virtual public void Print()
+  virtual public void Print()
 }
 
-class MyDerivedClass : MyBaseClass
+ class MyDerivedClass : MyBaseClass
 {
-override public void Print()
+ override public void Print()
 }
-
+```
 When the Print method is called by using the reference to the base class (mybc),
 the method call is passed up to the derived class and executed, because
 * The method in the base class is marked as virtual.
@@ -207,8 +207,7 @@ words, the overridden method cannot be, for example, private, and the overriding
 method public.
 * You cannot override a method that is static or is not declared as virtual.
 * Methods, properties, and indexers (which I covered in the preceding chapter), and
-another member type, called an event, can all be
-declared virtual and override.
+another member type, called an event, can all be declared virtual and override.
 
 * When you use a reference to the base class part of an object to call an overridden
 method, the method call is passed up the derivation hierarchy for execution to the
