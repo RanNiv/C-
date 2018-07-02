@@ -170,7 +170,7 @@ the method call is passed up to the derived class and executed, because
 The following code is the same as in the previous section, but this time, the methods are labeled
 virtual and override. This produces a result that is very different from that of the previous example. In
 this version, calling the method through the base class invokes the method in the derived class.
-```charp
+```csharp
 class MyBaseClass
 {
  virtual public void Print()
@@ -329,10 +329,10 @@ class Program
  {
  static void Main()
  {
- MyDerivedClass derived = new MyDerivedClass();
- MyBaseClass mybc = (MyBaseClass)derived;
- Console.WriteLine( derived.MyProperty );
- Console.WriteLine( mybc.MyProperty );
+  MyDerivedClass derived = new MyDerivedClass();
+  MyBaseClass mybc = (MyBaseClass)derived;
+  Console.WriteLine( derived.MyProperty );
+  Console.WriteLine( mybc.MyProperty );
  }
 }
 ```
@@ -445,10 +445,10 @@ public MyDerivedClass() // 3. Body of constructor executed
 }
 class MyBaseClass
 {
-public MyBaseClass() // 2. Base class constructor called
-{
+ public MyBaseClass() // 2. Base class constructor called
+ {
 ...
-}
+ }
 }
 ```
 ### Constructor Initializers
@@ -538,18 +538,19 @@ public string UserName;
 public int UserIdNumber;
 private MyClass( ) // Private constructor performs initializations
 { // common to the other constructors
-firstVar = 20;
-secondVar = 30.5;
+ firstVar = 20;
+ secondVar = 30.5;
 }
 public MyClass( string firstName ) : this() // Use constructor initializer
 {
-UserName = firstName;
-UserIdNumber = -1;
+ UserName = firstName;
+ UserIdNumber = -1;
 }
 public MyClass( int idNumber ) : this( ) // Use constructor initializer
 {
-UserName = "Anonymous";
-UserIdNumber = idNumber;
+ UserName = "Anonymous";
+ UserIdNumber = idNumber;
 }
 }
+```
 
