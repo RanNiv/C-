@@ -6,8 +6,7 @@ speaking, code reuse comes in two flavors: inheritance (the “is-a” relations
 containment/delegation model (the “has-a” relationship). Let’s begin this chapter by examining the
 classical inheritance model of the “is-a” relationship.
 When you establish “is-a” relationships between classes, you are building a dependency between
-two or more class types. The basic idea behind classical inheritance is that new classes can be created
-using existing classes as a starting point.</p>
+two or more class types.</p>
 
 • You can use an existing class, called the base class, as the basis for a new class,
 called the derived class. The members of the derived class consist of the following:
